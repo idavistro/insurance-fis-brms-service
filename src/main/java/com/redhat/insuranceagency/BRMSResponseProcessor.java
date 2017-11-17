@@ -11,7 +11,6 @@ import com.redhat.insurance.messages.PolicyMessage;
 
 public class BRMSResponseProcessor implements Processor {
 
-	@Override
 	public void process(Exchange exchange) throws Exception {
 		PolicyMessage resp = exchange.getProperty("PolicyMessage",PolicyMessage.class);
 		Message in = exchange.getIn();
@@ -64,5 +63,4 @@ public class BRMSResponseProcessor implements Processor {
 		in.setBody(resp);
 		exchange.setOut(in);
 	}
-
 }

@@ -14,7 +14,6 @@ import com.redhat.insuranceagency.brms.BRMSInsert;
 
 public class BRMSRequestProcessor implements Processor {
 
-	@Override
 	public void process(Exchange exchange) throws Exception {
 		Message in = exchange.getIn();
 		Message out = exchange.getOut();
